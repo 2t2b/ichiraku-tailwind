@@ -1,64 +1,69 @@
 function Home() {
-  const backgroundStyle = {
-    backgroundImage: 'url("../public/img/banner45.png")',
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "150% auto",
-    backgroundPosition: "center 2px",
-  };
-
+  const testimonials = [
+    {
+      message: "The best restaurant ever!",
+      name: "Groudon",
+    },
+    {
+      message: "The beast restaurant",
+      name: "Kyogre",
+    },
+    {
+      message: "The best restaurant ever and ever forever!",
+      name: "Rayquaza",
+    },
+    {
+      message: "The best ambiance in the world!",
+      name: "The amazing spiderman",
+    },
+    {
+      message: "nindota oy!",
+      name: "naruto",
+    },
+    {
+      message: "oy nindota 2!",
+      name: "Charizard",
+    },
+  ];
   return (
-    <section>
-      <div className="relative py-[5em] text-center text-[#7fff00] overflow-hidden min-h-[60vh] flex items-center justify-center">
+    <>
+      <section className="relative overflow-hidden py-20 md:py-24 text-white text-center">
         <div
-          className="absolute inset-0 blur-[5px] scale-[1.1] -z-10"
-          style={backgroundStyle}
+          className="absolute inset-0 bg-cover bg-center bg-fixed scale-105 blur-[5px]"
+          style={{ backgroundImage: "url('/img/banner45.png')" }}
         />
-        <div className="flex flex-col items-center justify-center px-4">
-          <p className="text-5xl font-bold">Welcome to Ichiraku</p>
-          <p className="text-2xl mt-10">
-            Experience the best cuisine in the city. Enjoy our signature dishes
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 w-[90%] max-w-[1200px] mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#7fff00]">
+            Welcome to Ichiraku
+          </h1>
+          <p className="text-lg md:text-xl text-[#7fff00]">
+            experience the best cuisine in the city. Enjoy our signature dishes
             and cozy ambiance
           </p>
         </div>
-      </div>
-
-      <div className="py-8">
-        <h2 className="text-center text-2xl font-bold mb-8">Customer Testimonials</h2>
-
-        <div className="max-w-6xl mx-auto px-4 flex flex-col gap-6">
-          <div className="bg-white border-l-[6px] border-[#84bd00] px-5 py-4 shadow-sm">
-            <p className="italic text-black">"The best restaurant ever!"</p>
-            <p className="mt-4 text-right font-bold text-black">
-              - Groudon
-            </p>
-          </div>
-          <div className="bg-white border-l-[6px] border-[#84bd00] px-5 py-4 shadow-sm">
-            <p className="italic text-black">"The beast restaurant"</p>
-            <p className="mt-4 text-right font-bold text-black">
-              - Kyogre
-            </p>
-          </div>
-           <div className="bg-white border-l-[6px] border-[#84bd00] px-5 py-4 shadow-sm">
-            <p className="italic text-black">"The best restaurant ever and ever forever!"</p>
-            <p className="mt-4 text-right font-bold text-black">
-              - Rayquaza
-            </p>
-          </div>
-           <div className="bg-white border-l-[6px] border-[#84bd00] px-5 py-4 shadow-sm">
-            <p className="italic text-black">"The best ambiance in the world!"</p>
-            <p className="mt-4 text-right font-bold text-black">
-              - The amazing spiderman
-            </p>
-          </div>
-          <div className="bg-white border-l-[6px] border-[#84bd00] px-5 py-4 shadow-sm">
-            <p className="italic text-black">"nindota oy!"</p>
-            <p className="mt-4 text-right font-bold text-black">
-              - naruto
-            </p>
+      </section>
+      <section className="py-12 bg-gray-50">
+        <div className="w-[90%] max-w-[1200px] mx-auto">
+          <h2 className="text-3xl font-bold text-center text-red-900 mb-8">
+            Testimonials
+          </h2>
+          <div className="space-y-6">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-white p-4 border-l-4 border-[#7fff00] shadow-sm"
+              >
+                <p className="italic">"{testimonial.message}"</p>
+                <span className="block mt-2 font-bold text-right text-gray-600">
+                  - {testimonial.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
