@@ -21,7 +21,7 @@ function About() {
                 </p>
             </div>
             <div>
-              <img src="/img/banner45.png" alt="" className="mx-auto w-[90%] mt-12 mb-[25px]"/>
+              <img src="img/banner45.png" alt="" className="mx-auto w-[90%] mt-12 mb-[25px]"/>
             </div>
     </div>
   );
