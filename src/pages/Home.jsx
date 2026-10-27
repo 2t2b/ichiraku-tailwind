@@ -45,7 +45,7 @@ function Home() {
       </section>
       <section className="py-12 bg-gray-50">
         <div className="w-[90%] max-w-[1200px] mx-auto">
-          <h2 className="text-3xl font-bold text-center text-red-900 mb-8">
+          <h2 className="text-3xl font-bold text-center text-[#496039] mb-8">
             Testimonials
           </h2>
           <div className="space-y-6">

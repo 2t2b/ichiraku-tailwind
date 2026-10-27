@@ -1,7 +1,7 @@
 function About() {
   return (
     <div>
-      <h1 className="text-center text-4xl text-lime-900 font-bold mt-16">
+      <h1 className="text-center text-4xl text-[#496039] font-bold mt-16">
         About Us
       </h1>
             <div className="mt-10 text-lg mx-28">
